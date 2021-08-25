@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+html, body {
+  margin: 0;
+  padding: 0;
+
+  height: 100%;
+  overflow: hidden;
+  background: rgb(205, 241, 47);
+  -webkit-app-region: drag;
+}
+
+.popup{
+  z-index: 99;
+  position: absolute;
+  width: 50px;
+  color: rgb(61, 61, 61);
+  font-family: 'Segoe UI', sans-serif;
+
+  font-weight: 600;
+  animation-name: popup;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes popup{
+  0%{
+    font-size:8px;
+  }
+  10%, 50%{
+    font-size:15px;
+  }
+
+  80%, 100%{
+    font-size:0px;
+  }
+}

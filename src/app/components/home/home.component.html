@@ -1,0 +1,70 @@
+<img *ngIf='!partieEnCours || loose' src="assets/img/snake.png" style='position: absolute; top: -10px; left: 160px; height: 180px; z-index: 9;'>
+<div
+    class="loose"
+    [ngClass]="{ 'loosing' : !partieEnCours }"
+>
+    Snake
+</div>
+
+<div
+    class="score-end"
+    [ngClass]="{ 'loosing' : !partieEnCours }"
+>
+    La <img src="assets/img/appleRed.png" style='height: 20px; padding-right: 5px; padding-left: 5px; top: 3px; position: relative'> fait gagner des points <br> 
+    La <img src="assets/img/bananas.png" style='height: 20px; padding-right: 5px; padding-left: 5px;  top: 3px; position: relative'> fait gagner du temps <br> 
+    Le <img src="assets/img/hole.png" style='height: 20px; padding-right: 5px; padding-left: 5px; top: 5px; position: relative'> est un raccourci <br> 
+</div>
+
+
+
+
+<div class="container">
+    <canvas
+        id="snake"
+        width="500px"
+        height="500px"
+    ></canvas>
+    <canvas
+        id="pomme"
+        width="500px"
+        height="500px"
+    ></canvas>
+</div>
+
+<div class="score" *ngIf='partieEnCours'>Score : {{score}} points</div>
+
+<div class="progress candy" data-width="0%">
+	<div class="progress-bar">
+	</div>
+</div>
+
+
+<div
+    class="loose"
+    [ngClass]="{ 'loosing' : loose }"
+>
+    Game Over
+</div>
+
+<div
+    class="score-end"
+    [ngClass]="{ 'loosing' : loose }"
+>
+    Bravo ! vous avez atteind le score de {{score}} points
+</div>
+
+<button
+    (click)="retry()"
+    class="retry"
+    [ngClass]="{ 'loosing' : loose }"
+>
+    Recommencer
+</button>
+
+<button
+    (click)="commencer()"
+    class="retry"
+    [ngClass]="{ 'loosing' : !partieEnCours }"
+>
+    Commencer
+</button>

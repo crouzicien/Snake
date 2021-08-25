@@ -1,0 +1,160 @@
+
+
+#snake{
+  border: 2px rgb(94, 93, 93) solid;
+  background: rgb(104, 158, 3);
+}
+#pomme{
+  position: absolute;
+  left: 0; top: 0;
+  border: 2px rgb(94, 93, 93) solid;
+  pointer-events: none;
+}
+.score{
+  position: absolute;
+  left: 10px; top: 475px;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 500;
+}
+
+.time{
+  position: absolute;
+  left: 10px; top: 520px; width: 460px;
+  background: red;
+  border-radius: 20px;
+}
+
+
+
+.loose{
+  position: absolute;
+  background: rgb(229, 241, 47);
+  color: rgb(77, 77, 77);
+  top: 100px; width: 440px; left: 10px;
+  height: 80px; line-height: 80px;
+  font-size: 60px;
+  font-weight: 600;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  border-radius: 20px;
+  border: 2px rgb(94, 93, 93) solid;
+  box-shadow: -1px 0px 5px 1px rgba(0, 0, 0, 0.3)
+}
+
+.retry{
+  position: absolute;
+  -webkit-app-region: no-drag;
+  border: none;
+  background: lightgrey;
+  color: rgb(77, 77, 77);
+  top: 430px;  left: 170px; width: 150px;
+  box-shadow: -1px 0px 5px 1px rgba(0, 0, 0, 0.3);
+  height: 50px; line-height: 50px;
+  font-size: 18px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 600;
+  border-radius: 10px;
+  opacity: 0;
+  cursor: pointer;
+  pointer-events: none;
+  &:hover{
+    background-color: rgb(194, 194, 194);
+  }
+}
+
+.score-end{
+  position: absolute;
+  background: rgb(205, 241, 47);
+  color: rgb(77, 77, 77);
+  border: 2px rgb(94, 93, 93) solid;
+  font-weight: 500;
+  top: 215px; width: 420px; left: 10px;
+  height: auto; line-height: 50px;
+  padding: 10px; margin: 20px;
+  font-size: 18px;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  font-family: 'Segoe UI', sans-serif;
+  border-radius: 10px;
+  box-shadow: -1px 0px 5px 1px rgba(0, 0, 0, 0.3)
+}
+
+.loosing{
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+
+
+
+
+
+
+// Progress bar
+.progress {
+  position: absolute;
+  bottom: 5px;
+  left: 20px; width: 460px;
+  z-index: 5;
+  background: #999999;
+  border: 2px rgb(94, 93, 93) solid;
+  border-radius: 10px;
+  display: inline-block;
+  box-shadow: 0 5px 17px rgba(40, 40, 40, 0.3), 0 0 3px 1px rgba(40, 40, 40, 0.3) inset;
+}
+
+.progress-text {
+  position: absolute;
+  font: bold 14px/20px Arial;
+  text-align: center;
+  top: 0;
+  left: 0;
+}
+
+.progress, .progress-bar, .progress-text {
+  width: 460px;
+  max-width: 460px;
+  height: 20px;
+}
+
+.progress .progress-text:first-child {
+  z-index: 5;
+  color: white;
+}
+
+.progress .progress-text:last-child {
+  z-index: 10;
+  color: black;
+}
+
+.progress-bar {
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+  border-radius: 12px;
+  width: 0;
+  transition: width .2s linear;
+}
+
+/* Candystripe style */
+.progress.candy .progress-bar {
+  background-color: rgb(189, 201, 23);
+  box-shadow: 0 0 6px 2px rgba(255, 255, 255, 0.3) inset;
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.35) 25%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.35) 50%, rgba(255, 255, 255, 0.35) 75%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0));
+  background-repeat: repeat-x;
+  background-size: 20px 20px;
+
+  animation: candystripe 1s linear infinite;
+}
+
+
+@keyframes candystripe {
+  to {
+    background-position: 20px 0;
+  }
+}
