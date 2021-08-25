@@ -5,7 +5,7 @@
 Jeux du snake
 
 ![Alt text](assets/screen1.png)
-![Alt text](assets/screen2.png)
+![Alt text](assets/screen3.png)
 
 ### Pré-requis
 
